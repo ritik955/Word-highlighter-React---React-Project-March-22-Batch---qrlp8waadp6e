@@ -6,6 +6,9 @@ export const ParagraphInput = ({ pRef }) => {
             Enter paragraph here
             <div id="paragraph-input"
                 contentEditable
+                // onChange={worker}
+                dangerouslySetInnerHTML={{ __html: pRef.current ? pRef.current.innerHTML : 'Enter Text Here' }}
+                ref={pRef}
             >
             </div>
         </>
